@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ukaigwe Goodness - Portfolio</title>
+    <meta
+      name="description"
+      content="Personal portfolio showcasing projects, skills and experience."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <a href="#" class="logo">UKAIGWE GOODNESS CHIBUIKEM</a>
+          <button
+            class="nav-toggle"
+            id="navToggle"
+            aria-label="Toggle navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Hi, I'm <span class="highlight">Goodness</span></h1>
+            <p class="hero-subtitle">Full Stack & Blockchain Developer</p>
+            <p class="hero-description">
+              I am a Full-Stack and Blockchain Developer with hands-on
+              experience building real-world applications across web, mobile,
+              and decentralized environments. My journey cuts across
+              JavaScript/TypeScript, Tailwind CSS, Next.js/React, FastAPI, and
+              Python for back-end and data-driven features. On the blockchain
+              side, I build smart contracts using Solidity and Cairo, and I’ve
+              worked with token standards such as ERC20, ERC721, and
+              platform-specific contract development (e.g., Linera). I have
+              practical experience designing and deploying decentralized
+              systems, including: Tokenized crowdfunding platforms, Smart
+              contract–based reward systems (NFT + token rewards),
+              Blockchain-enabled gaming mechanics (Snake game with on-chain
+              state + scoring). Outside blockchain, I also build full-stack
+              solutions integrated with tools like Supabase for authentication
+              and database management, and I actively explore real-time
+              applications using WebSockets and FastAPI.
+            </p>
+            <div class="hero-buttons">
+              <a href="#projects" class="btn btn-primary">View My Work</a>
+              <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="images/profile_photo.jpg" alt="Profile Picture" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <p>
+            I'm a passionate web developer with experience in building modern,
+            scalable web applications. I love turning complex problems into
+            simple, beautiful, and intuitive designs.
+          </p>
+          <p>
+            When I'm not coding, you can find me exploring new technologies,
+            contributing to open source, or sharing my knowledge through writing
+            and mentoring.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-image">
+              <img src="images/HowFar.png" alt="HowFar Project" />
+            </div>
+            <div class="project-content">
+              <h3>HowFar</h3>
+              <p>
+                "How Far” is a sleek, real-time chat application built to
+                showcase WebSocket-based communication with a modern and
+                responsive UI. The backend is powered by FastAPI, enabling live
+                messaging, user join/leave notifications, an online users
+                counter, and message timestamps. On the front-end side, a
+                lightweight HTML/CSS/JavaScript client connects to the WebSocket
+                endpoint, allowing multiple users to chat instantly and
+                seamlessly across devices. The design is mobile-friendly, fast
+                and minimal, making it ideal both as a demonstration of
+                real-time web communication and as a foundation for more
+                advanced features such as authentication, private rooms or
+                message persistence.
+              </p>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Python 3.7+</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Uvicorn</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://how-far.onrender.com"
+                  target="_blank"
+                  rel="noopener"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/Goodnessukaigwe/How_far"
+                  target="_blank"
+                  rel="noopener"
+                  >View Code</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-image">
+              <img src="images/Student_Management_System.png" alt="Project 2" />
+            </div>
+            <div class="project-content">
+              <h3>Student Management System</h3>
+              <p>
+                The app focuses on creating a smooth and enjoyable user
+                experience by efficiently handling updates to the DOM without
+                page reloads. Every action—from typing a new task to marking one
+                as completed—happens instantly, giving it a dynamic feel similar
+                to modern single-page applications. Although it doesn’t use a
+                backend, all operations run directly in the browser, making it
+                fast, lightweight, and easy to deploy as a static web app. The
+                project also demonstrates a solid understanding of front-end
+                logic, event handling, and state management using only vanilla
+                JavaScript, without relying on external frameworks. This project
+                highlights practical front-end development skills such as layout
+                design, responsive styling, and DOM manipulation while
+                maintaining clean, maintainable, and readable code. It serves as
+                a foundation for future upgrades like task persistence using
+                localStorage, task filtering, or integration with backend APIs.
+              </p>
+              <div class="project-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">Vanilla JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://student-management-system-l4eh.onrender.com"
+                  target="_blank"
+                  rel="noopener"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/Goodnessukaigwe/advance_todo_app"
+                  target="_blank"
+                  rel="noopener"
+                  >View Code</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-image">
+              <img src="images/Serphida.jpeg" alt="Project 3" />
+            </div>
+            <div class="project-content">
+              <h3>Serphida</h3>
+              <p>
+                Serphida is a decentralized web application designed to make
+                blockchain interactions simple and intuitive. The frontend
+                provides a clean and responsive interface that allows users to
+                connect their wallets, perform on-chain transactions, and
+                interact seamlessly with deployed smart contracts. I was
+                responsible for developing the smart contracts and integrating
+                them into the frontend, ensuring that user actions on the UI
+                directly trigger blockchain functions. This involved writing,
+                testing, and deploying Solidity contracts, as well as
+                implementing smooth communication between the dApp and the
+                blockchain using tools like ethers.js and Web3.js. The project
+                demonstrates full-stack decentralized application (dApp)
+                development—from smart contract logic to frontend interaction.
+                It reflects a focus on user experience, security, and efficiency
+                in handling blockchain transactions.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Vue.js</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">API</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://farcaster.xyz/miniapps/SLt5gqLa0UA8/serphida"
+                  target="_blank"
+                  rel="noopener"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/Jeteeah/serphida-frontend"
+                  target="_blank"
+                  rel="noopener"
+                  >View Code</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Frontend</h3>
+            <ul class="skill-list">
+              <li>HTML5 & CSS3</li>
+              <li>JavaScript (ES6+)</li>
+              <li>React / Vue.js</li>
+              <li>Responsive Design</li>
+              <li>Tailwind</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Backend</h3>
+            <ul class="skill-list">
+              <li>Node.js / Express</li>
+              <li>Python / FastAPI</li>
+              <li>REST APIs</li>
+              <li>Database (SQL/NoSQL)</li>
+              <li>Solidity & Rust</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Tools & Others</h3>
+            <ul class="skill-list">
+              <li>Git & GitHub</li>
+              <li>VS Code</li>
+              <li>Figma</li>
+              <li>Jupyter Notebook</li>
+              <li>Testing & Debugging</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="contact-intro">
+          Have a question or want to work together? Feel free to reach out!
+        </p>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="your.email@example.com"
+              required
+            />
+          </div>
+
+          <div class="form-group form-group-full">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Your message here..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-status" id="formStatus"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p>
+            &copy; <span id="year"></span> Goodness Ukaigwe. All rights
+            reserved. Built with passion for clean code, innovation, and impact.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://github.com/Goodnessukaigwe"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/goodness-ukaigwe-794985331?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://x.com/uka_the_great?s=21"
+              target="_blank"
+              rel="noopener"
+              aria-label="Twitter"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
