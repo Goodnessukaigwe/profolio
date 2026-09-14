@@ -2,6 +2,35 @@ const views = [...document.querySelectorAll('[data-view]')];
 const viewLinks = [...document.querySelectorAll('[data-view-link]')];
 const bottomNav = document.getElementById('bottomNav');
 const menuButton = document.getElementById('menuButton');
+const themeToggle = document.getElementById('themeToggle');
+const themeToggleIcon = themeToggle?.querySelector('.theme-toggle-icon');
+
+function applyTheme(theme) {
+  const isLight = theme === 'light';
+  document.documentElement.dataset.theme = isLight ? 'light' : 'dark';
+  if (!themeToggle) return;
+  themeToggle.setAttribute('aria-pressed', String(isLight));
+  themeToggle.setAttribute('aria-label', isLight ? 'Switch to dark theme' : 'Switch to light theme');
+  if (themeToggleIcon) themeToggleIcon.textContent = isLight ? '☀' : '☾';
+}
+
+let savedTheme = 'dark';
+try {
+  savedTheme = window.localStorage.getItem('portfolio-theme') || 'dark';
+} catch (error) {
+  savedTheme = 'dark';
+}
+applyTheme(savedTheme);
+
+themeToggle?.addEventListener('click', () => {
+  const nextTheme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+  applyTheme(nextTheme);
+  try {
+    window.localStorage.setItem('portfolio-theme', nextTheme);
+  } catch (error) {
+    // Theme still applies for the current session when storage is unavailable.
+  }
+});
 
 function showView(viewName, updateHash = true) {
   const nextView = views.some((view) => view.dataset.view === viewName) ? viewName : 'home';
@@ -43,6 +72,51 @@ document.querySelectorAll('[data-filter]').forEach((button) => {
       card.hidden = !visible;
     });
   });
+});
+
+document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+  const track = carousel.querySelector('.project-carousel-track');
+  const slides = carousel.querySelectorAll('.project-carousel-slide');
+  const status = carousel.querySelector('[data-carousel-status]');
+  if (!track || !slides.length || !status) return;
+
+  let currentIndex = 0;
+  let carouselTimer;
+  let isPaused = false;
+
+  const updateCarousel = () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    status.textContent = `${String(currentIndex + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
+    slides.forEach((slide, index) => slide.setAttribute('aria-hidden', String(index !== currentIndex)));
+  };
+
+  const startCarousel = () => {
+    if (carouselTimer || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    carouselTimer = window.setInterval(() => {
+      if (!isPaused) updateCarousel();
+    }, 4000);
+  };
+
+  const stopCarousel = () => {
+    window.clearInterval(carouselTimer);
+    carouselTimer = undefined;
+  };
+
+  carousel.addEventListener('mouseenter', () => { isPaused = true; });
+  carousel.addEventListener('mouseleave', () => { isPaused = false; });
+  carousel.addEventListener('focusin', () => { isPaused = true; });
+  carousel.addEventListener('focusout', (event) => {
+    if (!carousel.contains(event.relatedTarget)) isPaused = false;
+  });
+  carousel.addEventListener('mouseenter', stopCarousel);
+  carousel.addEventListener('mouseleave', startCarousel);
+  carousel.addEventListener('focusin', stopCarousel);
+  carousel.addEventListener('focusout', (event) => {
+    if (!carousel.contains(event.relatedTarget)) startCarousel();
+  });
+
+  startCarousel();
 });
 
 const contactForm = document.getElementById('contactForm');

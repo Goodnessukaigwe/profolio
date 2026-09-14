@@ -6,7 +6,13 @@
     <title>Goodness Ukaigwe | Developer Portfolio</title>
     <meta
       name="description"
-      content="Portfolio of Goodness Ukaigwe, a full-stack and blockchain developer."
+      content="Portfolio of Goodness Ukaigwe, a Full-Stack Engineer building reliable web and mobile applications."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -22,12 +28,22 @@
           <span class="brand-mark">GU</span>
           <span
             ><strong>goodness.ukaigwe</strong
-            ><small>full-stack / blockchain</small></span
+            ><small>FULL-STACK ENGINEER</small></span
           >
         </a>
         <div class="topbar-status">
           <span class="status-dot"></span><span>available for work</span>
         </div>
+        <button
+          class="theme-toggle"
+          type="button"
+          id="themeToggle"
+          aria-label="Switch to light theme"
+          aria-pressed="false"
+        >
+          <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+          <span class="theme-toggle-label">theme</span>
+        </button>
         <button
           class="menu-button"
           type="button"
@@ -53,13 +69,17 @@
           <div class="home-grid">
             <div class="hero-copy reveal">
               <p class="eyebrow">HELLO, WORLD_</p>
-              <h1 id="home-title">
-                I build <em>useful</em><br />digital systems.
-              </h1>
+              <h1 id="home-title">FULL-STACK ENGINEER</h1>
               <p class="hero-lede">
-                Full-stack and blockchain developer creating reliable web,
-                mobile, and decentralized products from interface to smart
-                contract.
+                Full-Stack Engineer with proven experience leading
+                cross-platform development across web and mobile ecosystems
+                using TypeScript, React, Next.js, and React Native (Expo).
+                Competent in designing complete features, from production-grade
+                integrations with Stripe, PostHog, and Sentry to backend REST
+                APIs and MongoDB databases. Experienced in managing Git
+                workflows, coordinating cross-disciplinary technical efforts,
+                and driving overall system performance to build reliable,
+                user-focused applications.
               </p>
               <div class="button-row">
                 <a
@@ -101,7 +121,7 @@
           </div>
           <div class="metrics-grid reveal">
             <div class="metric">
-              <span>04</span><small>featured projects</small>
+              <span>06</span><small>featured projects</small>
             </div>
             <div class="metric">
               <span>03+</span><small>years learning & shipping</small>
@@ -185,7 +205,7 @@
           </div>
           <div class="view-heading">
             <div>
-              <p class="eyebrow">WORK_ARCHIVE / 004</p>
+              <p class="eyebrow">WORK_ARCHIVE / 006</p>
               <h2 id="projects-title">Things I've <em>built.</em></h2>
             </div>
             <p class="view-intro">
@@ -222,7 +242,7 @@
                 <img
                   src="images/HowFar.png"
                   alt="HowFar project interface"
-                /><span class="image-index">01 / 04</span
+                /><span class="image-index">01 / 06</span
                 ><span class="project-state">● live system</span>
               </div>
               <div class="project-body">
@@ -277,7 +297,7 @@
                 <img
                   src="images/Student_Management_System.png"
                   alt="Student Management System project interface"
-                /><span class="image-index">02 / 04</span
+                /><span class="image-index">02 / 06</span
                 ><span class="project-state state-teal">● browser app</span>
               </div>
               <div class="project-body">
@@ -335,7 +355,7 @@
                 <img
                   src="images/Serphida.jpeg"
                   alt="Serphida project interface"
-                /><span class="image-index">03 / 04</span
+                /><span class="image-index">03 / 06</span
                 ><span class="project-state state-orange">● on-chain</span>
               </div>
               <div class="project-body">
@@ -380,7 +400,7 @@
                 <img
                   src="images/projects/zeteo.png"
                   alt="Zetoe Academy project interface"
-                /><span class="image-index">04 / 04</span
+                /><span class="image-index">04 / 06</span
                 ><span class="project-state state-purple">● team build</span>
               </div>
               <div class="project-body">
@@ -421,6 +441,131 @@
                 </div>
               </div>
             </article>
+            <article class="project-card reveal" data-category="web">
+              <div
+                class="project-image project-carousel"
+                data-carousel
+                tabindex="0"
+                aria-label="Eklan project screenshots"
+              >
+                <div class="project-carousel-track">
+                  <img
+                    class="project-carousel-slide"
+                    src="images/EKlan/Eklan.png"
+                    alt="Eklan learner dashboard"
+                  /><img
+                    class="project-carousel-slide"
+                    src="images/EKlan/eklan_mobile1.png"
+                    alt="Eklan clinical conversation practice screen"
+                    aria-hidden="true"
+                  /><img
+                    class="project-carousel-slide"
+                    src="images/EKlan/eklan_mobile2.png"
+                    alt="Eklan mobile app home screen"
+                    aria-hidden="true"
+                  /><img
+                    class="project-carousel-slide"
+                    src="images/EKlan/my_plan.png"
+                    alt="Eklan learning journey screen"
+                    aria-hidden="true"
+                  /><img
+                    class="project-carousel-slide"
+                    src="images/EKlan/practice.png"
+                    alt="Eklan practice modes screen"
+                    aria-hidden="true"
+                  />
+                </div>
+                <span class="image-index" data-carousel-status>01 / 05</span
+                ><span class="project-state state-teal">● live platform</span>
+              </div>
+              <div class="project-body">
+                <div class="project-title-row">
+                  <div>
+                    <p class="eyebrow">AI LEARNING PLATFORM</p>
+                    <h3>Eklan</h3>
+                  </div>
+                  <span class="project-number">05</span>
+                </div>
+                <p>
+                  Eklan is an AI-powered English practice platform for
+                  healthcare professionals, combining realistic clinical drills,
+                  voice and text conversations, pronunciation feedback, live
+                  tutor classes, and personalized learning journeys.
+                </p>
+                <div class="project-specs">
+                  <span><small>STACK</small>Next.js / React / TypeScript</span
+                  ><span><small>ROLE</small>full-stack</span>
+                </div>
+                <div class="tag-row">
+                  <span>Next.js</span><span>Gemini AI</span><span>MongoDB</span
+                  ><span>Expo</span><span>Stripe</span>
+                </div>
+                <div class="project-actions">
+                  <a
+                    href="https://app.eklan.ai"
+                    target="_blank"
+                    rel="noopener"
+                    class="button button-primary"
+                    >Live demo ↗</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="project-card reveal" data-category="web">
+              <div
+                class="project-image project-carousel"
+                data-carousel
+                tabindex="0"
+                aria-label="Kadsamsha project screenshots"
+              >
+                <div class="project-carousel-track">
+                  <img
+                    class="project-carousel-slide"
+                    src="images/Kadsamsha/Kadsamsha_home.png"
+                    alt="Kadsamsha learning platform home screen"
+                  /><img
+                    class="project-carousel-slide"
+                    src="images/Kadsamsha/Kadsamsha_about.png"
+                    alt="Kadsamsha learning platform about screen"
+                    aria-hidden="true"
+                  />
+                </div>
+                <span class="image-index" data-carousel-status>01 / 02</span
+                ><span class="project-state state-teal">● live platform</span>
+              </div>
+              <div class="project-body">
+                <div class="project-title-row">
+                  <div>
+                    <p class="eyebrow">LEARNING MANAGEMENT SYSTEM</p>
+                    <h3>Kadsamsha</h3>
+                  </div>
+                  <span class="project-number">06</span>
+                </div>
+                <p>
+                  Kadsamsha is a self-paced learning platform that brings
+                  professional training online through course enrolment,
+                  interactive assessments, progress tracking, and verifiable
+                  digital certificates for learners and partner organizations.
+                </p>
+                <div class="project-specs">
+                  <span><small>STACK</small>Next.js / React / TypeScript</span
+                  ><span><small>ROLE</small>full-stack</span>
+                </div>
+                <div class="tag-row">
+                  <span>Next.js</span><span>Supabase</span><span>Paystack</span
+                  ><span>shadcn/ui</span><span>Vercel</span>
+                </div>
+                <div class="project-actions">
+                  <a
+                    href="https://kadsahmsa.vercel.app/"
+                    target="_blank"
+                    rel="noopener"
+                    class="button button-primary"
+                    >Live demo ↗</a
+                  >
+                </div>
+              </div>
+            </article>
             +
           </div>
           +
@@ -444,95 +589,60 @@
               <h2 id="skills-title">How I <em>work.</em></h2>
             </div>
             <p class="view-intro">
-              A practical toolkit for turning ideas into tested, deployed, and
-              maintainable products.
+              A broad technical toolkit for building, integrating, and
+              maintaining useful digital systems.
             </p>
           </div>
           +
-          <div class="skills-layout">
-            <div class="skill-stack">
-              <article class="skill-card reveal">
-                <div class="skill-card-top">
-                  <span class="skill-icon">&lt;/&gt;</span>
-                  <div>
-                    <p class="eyebrow">01 / INTERFACE</p>
-                    <h3>Frontend development</h3>
-                  </div>
-                  <strong>90%</strong>
-                </div>
-                <p>
-                  Responsive, accessible interfaces that feel clear and fast
-                  across screens.
-                </p>
-                <div class="progress"><span style="width: 90%"></span></div>
-                <div class="tag-row">
-                  <span>HTML5 & CSS3</span><span>JavaScript ES6+</span
-                  ><span>React / Vue</span><span>Tailwind</span>
-                </div>
-              </article>
-              <article class="skill-card skill-card-orange reveal">
-                <div class="skill-card-top">
-                  <span class="skill-icon">{ }</span>
-                  <div>
-                    <p class="eyebrow">02 / SYSTEMS</p>
-                    <h3>Backend & blockchain</h3>
-                  </div>
-                  <strong>85%</strong>
-                </div>
-                <p>
-                  APIs, databases, real-time services, smart contracts, and
-                  decentralized interactions.
-                </p>
-                <div class="progress"><span style="width: 85%"></span></div>
-                <div class="tag-row">
-                  <span>Node / Express</span><span>Python / FastAPI</span
-                  ><span>Solidity & Cairo</span><span>REST APIs</span>
-                </div>
-              </article>
-              <article class="skill-card skill-card-teal reveal">
-                <div class="skill-card-top">
-                  <span class="skill-icon">↗</span>
-                  <div>
-                    <p class="eyebrow">03 / DELIVERY</p>
-                    <h3>Tools & collaboration</h3>
-                  </div>
-                  <strong>88%</strong>
-                </div>
-                <p>
-                  Focused delivery with version control, design tools, testing,
-                  and team leadership.
-                </p>
-                <div class="progress"><span style="width: 88%"></span></div>
-                <div class="tag-row">
-                  <span>Git & GitHub</span><span>VS Code</span><span>Figma</span
-                  ><span>Team lead</span>
-                </div>
-              </article>
-            </div>
-            <aside class="skills-aside">
-              <article class="console-card code-card reveal">
-                <div class="card-heading">
-                  <span>stack.config</span><span class="card-dot"></span>
-                </div>
-                <pre><code><span class="code-purple">const</span> goodness = {
-  focus: <span class="code-teal">"useful systems"</span>,
-  frontend: [<span class="code-orange">"React"</span>, <span class="code-orange">"Vue"</span>],
-  backend: [<span class="code-orange">"FastAPI"</span>, <span class="code-orange">"Node"</span>],
-  chain: [<span class="code-orange">"Solidity"</span>, <span class="code-orange">"Cairo"</span>]
-};</code></pre>
-              </article>
-              <article class="console-card reveal">
-                <div class="card-heading">
-                  <span>delivery_log</span
-                  ><span class="live-label">03 / 03</span>
-                </div>
-                <ul class="log-list">
-                  <li><span class="log-check">✓</span>design with purpose</li>
-                  <li><span class="log-check">✓</span>build in small loops</li>
-                  <li><span class="log-check">✓</span>ship, learn, improve</li>
-                </ul>
-              </article>
-            </aside>
+          <div class="skills-catalog">
+            <article class="skill-card skill-catalog-card reveal">
+              <p class="eyebrow">01 / FOUNDATIONS</p>
+              <h3>Programming Languages</h3>
+              <p>Python, JavaScript, TypeScript, Solidity, SQL</p>
+            </article>
+            <article class="skill-card skill-catalog-card reveal">
+              <p class="eyebrow">02 / WEB</p>
+              <h3>Web Development</h3>
+              <p>HTML, CSS, React, Next.js, Node.js, Express, REST APIs</p>
+            </article>
+            <article class="skill-card skill-catalog-card reveal">
+              <p class="eyebrow">03 / MOBILE</p>
+              <h3>Mobile Development</h3>
+              <p>
+                React Native, Expo, Expo Push Notifications, Mobile Versioning
+                &amp; Force-Update Mechanisms
+              </p>
+            </article>
+            <article class="skill-card skill-catalog-card reveal">
+              <p class="eyebrow">04 / DATA SYSTEMS</p>
+              <h3>Backend &amp; Databases</h3>
+              <p>
+                MongoDB (Mongoose), PostgreSQL (Supabase), FastAPI,
+                Authentication &amp; Authorization, Data Modeling, CRUD
+                Operations
+              </p>
+            </article>
+            <article class="skill-card skill-catalog-card reveal">
+              <p class="eyebrow">05 / OPERATIONS</p>
+              <h3>Analytics, Payments &amp; Monitoring</h3>
+              <p>Stripe (Subscription Billing), PostHog, Amplitude, Sentry</p>
+            </article>
+            <article class="skill-card skill-catalog-card reveal">
+              <p class="eyebrow">06 / INFRASTRUCTURE</p>
+              <h3>Tools &amp; Infrastructure</h3>
+              <p>Git, GitHub, Docker, Postman, Linux, VS Code</p>
+            </article>
+            <article
+              class="skill-card skill-catalog-card skill-catalog-wide reveal"
+            >
+              <p class="eyebrow">07 / LEADERSHIP</p>
+              <h3>Core Technical Competencies</h3>
+              <p>
+                Lead Engineering, Repository &amp; Branching Management, AI
+                System Integration, System Architecture, Problem-Solving,
+                Debugging, Technical Documentation, Teaching &amp; Mentoring
+              </p>
+            </article>
           </div>
           +
         </section>
@@ -615,9 +725,9 @@
                 <div class="card-heading">
                   <span>direct_channels</span><span class="card-dot"></span>
                 </div>
-                <a href="mailto:your.email@example.com"
+                <a href="goodnessukaigwe2020@gmail.com"
                   ><span>email</span
-                  ><strong>your.email@example.com ↗</strong></a
+                  ><strong>goodnessukaigwe2020@gmail.com ↗</strong></a
                 ><a
                   href="https://github.com/Goodnessukaigwe"
                   target="_blank"
