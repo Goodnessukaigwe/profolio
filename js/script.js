@@ -5,6 +5,23 @@ const menuButton = document.getElementById('menuButton');
 const themeToggle = document.getElementById('themeToggle');
 const themeToggleIcon = themeToggle?.querySelector('.theme-toggle-icon');
 
+function resetHomeEntrance() {
+  const entranceItems = document.querySelectorAll('#view-home .home-entrance');
+  entranceItems.forEach((item, index) => {
+    item.classList.remove('is-entered');
+    item.style.setProperty('--home-delay', `${index * 180}ms`);
+  });
+  return entranceItems;
+}
+
+function replayHomeEntrance() {
+  const entranceItems = resetHomeEntrance();
+  entranceItems[0]?.offsetWidth;
+  requestAnimationFrame(() => {
+    entranceItems.forEach((item) => item.classList.add('is-entered'));
+  });
+}
+
 function applyTheme(theme) {
   const isLight = theme === 'light';
   document.documentElement.dataset.theme = isLight ? 'light' : 'dark';
@@ -34,12 +51,14 @@ themeToggle?.addEventListener('click', () => {
 
 function showView(viewName, updateHash = true) {
   const nextView = views.some((view) => view.dataset.view === viewName) ? viewName : 'home';
+  if (nextView !== 'home') resetHomeEntrance();
   views.forEach((view) => view.classList.toggle('is-active', view.dataset.view === nextView));
   viewLinks.forEach((link) => link.classList.toggle('is-active', link.dataset.viewLink === nextView));
   if (updateHash && window.location.hash !== `#${nextView}`) history.pushState(null, '', `#${nextView}`);
   window.scrollTo({ top: 0, behavior: 'smooth' });
   if (menuButton) menuButton.setAttribute('aria-expanded', 'false');
   if (bottomNav) bottomNav.classList.remove('is-open');
+  if (nextView === 'home') replayHomeEntrance();
   requestAnimationFrame(observeReveals);
 }
 
